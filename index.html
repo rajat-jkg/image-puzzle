@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Puzzle | By Rajat Gupta</title>
+    <meta property="og:image" content="https://infoofbooks.in/wp-content/uploads/2021/05/Screenshot-from-2021-05-30-15-26-11.png">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/main.js"></script>
+</head>
+
+<body>
+    <div id="intro" style="display: block;">
+        <header>
+            <h1>Image Puzzle</h1>
+            <p>Developed by Rajat Gupta </p>
+        </header>
+        <div class="container" id="image-sel">
+            <div style="height: 50px;"></div>
+            <h2 style="text-align: center;">Chose an image</h1>
+                <div style="height: 30px;"></div>
+                <div class="select_image">
+                    <img src="./pictures/1.jpg" alt="pic 1" class="img" onclick="startgame(1)">
+                    <img src="./pictures/2.jpg" alt="pic 2" class="img" onclick="startgame(2)">
+                    <div class="break"></div>
+                </div>
+        </div>
+    </div>
+    <div style="height: 50px;"></div>
+    <div id="game-grid" style="display: none;">
+        <div style="text-align: center;">
+            <H1>Use the control buttons to move the empty space and solve the puzzle</H1>
+            <H2>Settle the space at the bttuom right corner</H2>
+        </div>
+        <div style="height: 50px;"></div>
+        <div class="container">
+            <div id="1x1" class="cells"></div>
+            <div id="1x2" class="cells"></div>
+            <div id="1x3" class="cells"></div>
+            <div class="break"></div>
+            <div id="2x1" class="cells"></div>
+            <div id="2x2" class="cells"></div>
+            <div id="2x3" class="cells"></div>
+            <div class="break"></div>
+            <div id="3x1" class="cells"></div>
+            <div id="3x2" class="cells"></div>
+            <div id="3x3" class="cells"></div>
+            <div class="break"></div>
+            <div id="4x1" class="cells"></div>
+            <div id="4x2" class="cells"></div>
+            <div id="4x3" class="cells"></div>
+            <div class="break"></div>
+        </div>
+        <div style="height: 20px; zoom: 125%;"></div>
+        <div style="text-align: center;" id="remove-after-game">
+            <button class="controls" onclick="control('u')">&#8593;</button>
+            <br>
+            <button class="controls" onclick="control('l')">&#8592;</button>
+            <button class="controls" onclick="control('d')">&#8595;</button>
+            <button class="controls" onclick="control('r')">&#8594;</button>
+            <h1 id="result"></h1>
+            <div style="height: 20px; zoom: 125%;"></div>
+            <a href="#hide"><button style="width: aouto; zoom: 1.5;" onclick="showimage()">Show original image </button></a>
+            <img src="./pictures/1.jpg" alt="pic 1" class="img" style="width: min-content; max-width: 90%; display: none; margin: 5px;" id="pic 1">
+            <img src="./pictures/2.jpg" alt="pic 2" class="img" style="width: min-content; max-width: 90%; display: none; margin: 5px;" id="pic 2">
+            <div class="break"></div>
+            <div style="width: fit-content; margin: auto;">
+            <button id="hide" style="display: none; text-align: center; zoom: 1.5;" onclick="hideimage()">Hide</button>
+            </div>
+        </div>
+    </div>
+    <h1 id="result" style="text-align: center;"></h1>
+</body>
+</html>
